@@ -30,8 +30,6 @@ export function Table({ data }: TableProps) {
     { field: "best_price_away_odd" },
     { field: "best_price_home_odd_books", sortable: false, valueFormatter: (datum) => String(datum.value).length > 30 ? String(datum.value).substring(0, 30) + "..." : String(datum.value) },
     { field: "best_price_away_odd_books", sortable: false, valueFormatter: (datum) => String(datum.value).length > 30 ? String(datum.value).substring(0, 30) + "..." : String(datum.value) },
-    { field: "home_team", sortable: false },
-    { field: "away_team", sortable: false },
   ]);
 
   const [filter, setFilter] = useState<string | undefined>(undefined)
